@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Star Wars + BB-8</title>
+  <style>
+    :root {
+      --bb-blue: #244356;
+      --bb-light-blue: #EBF2FA;
+      --bb-middle-blue: #C4DEED;
+      --bb-orange: #FDC23E;
+      --bb-blue-star: #38B4C1;
+      --bb-pink-star: #FF7761;
+      --bb-orange-star: #FDC23E;
+    }
+
+    body {
+      margin: 0;
+      background: url(https://cdn.eso.org/images/thumb700x/eso1426c.jpg) no-repeat center center fixed;
+      background-size: cover;
+      letter-spacing: 1.5em;
+      color: white;
+      font-family: sans-serif;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      margin: 30px auto 0;
+      animation: starwars 4s ease-in-out;
+    }
+
+    p {
+      text-align: center;
+      font-size: 2em;
+      animation: force 4s ease forwards;
+    }
+
+    @keyframes starwars {
+      from {
+        transform: scale(2);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes force {
+      from {
+        transform: rotateY(90deg);
+        opacity: 0;
+      }
+      to {
+        transform: rotateY(0);
+        opacity: 1;
+      }
+    }
+
+    .bb-8 {
+      position: relative;
+      width: 800px;
+      height: 500px;
+      margin: 50px auto;
+      overflow: hidden;
+    }
+
+    .bb-8__robot {
+      position: absolute;
+      top: 100px;
+      left: 230px;
+      width: 244px;
+      height: 282px;
+    }
+
+    .bb-8__head {
+      position: absolute;
+      top: 5px;
+      left: -16px;
+      width: 170px;
+      height: 105px;
+      background: var(--bb-light-blue);
+      border-radius: 100px 100px 20px 20px;
+      border: 7px solid var(--bb-blue);
+      box-shadow: inset -16px 0px 0 var(--bb-middle-blue),
+        inset 18px 0px 0 white;
+      transform: rotate(-30deg);
+      z-index: 2;
+    }
+
+    .bb-8__head-line {
+      position: absolute;
+      top: 43px;
+      left: 3px;
+      height: 7px;
+      width: 160px;
+      background: var(--bb-blue);
+    }
+
+    .bb-8__head-bottom {
+      position: absolute;
+      top: 88px;
+      left: -6px;
+      height: 20px;
+      width: 174px;
+      background: var(--bb-blue);
+      border-radius: 100px;
+    }
+
+    .bb-8__eye {
+      position: absolute;
+      top: 21px;
+      left: 50px;
+      height: 56px;
+      width: 56px;
+      background-color: #2a6b80;
+      border-radius: 100%;
+      border: 7px solid var(--bb-blue);
+      z-index: 1;
+    }
+
+    .bb-8__eye-light {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      height: 10px;
+      width: 10px;
+      background-color: white;
+      border-radius: 100%;
+    }
+
+    .bb-8__eye-small {
+      position: absolute;
+      top: 52px;
+      left: 120px;
+      height: 24px;
+      width: 24px;
+      background-color: #2a6b80;
+      border-radius: 100%;
+      border: 4px solid var(--bb-blue);
+    }
+
+    .bb-8__antenna-short,
+    .bb-8__antenna-long {
+      position: absolute;
+      width: 4px;
+      background: white;
+    }
+
+    .bb-8__antenna-short {
+      height: 20px;
+      top: -20px;
+      left: 85px;
+    }
+
+    .bb-8__antenna-long {
+      height: 30px;
+      top: -30px;
+      left: 95px;
+    }
+
+    .bb-8__body {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 218px;
+      height: 218px;
+      border: 7px solid var(--bb-blue);
+      border-radius: 100%;
+      background-image: url("bb8.png");
+      background-size: cover;
+      background-position: center center;
+      transform-origin: center center;
+      z-index: 1;
+      animation: body 2s linear infinite;
+    }
+
+    
+
+    
+    @keyframes body{
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .bb-8__shadow {
+      position: absolute;
+      top: 230px;
+      left: 65px;
+      width: 150px;
+      height: 20px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 100%;
+      z-index: -1;
+    }
+    .luna{
+      position: absolute;
+      top: 76%;
+      left: 0%;
+      width: 100%;
+      height: 70%;
+      border-radius: 46%;
+      background-image: url("https://png.pngtree.com/png-clipart/20240329/original/pngtree-full-moon-astronomy-and-space-concept-png-image_14703492.png");
+      background-size: fill;
+      background-position: center center;
+      filter: blur(5px);
+      
+    }
+  </style>
+</head>
+<body>
+  <img src="https://1000marcas.net/wp-content/uploads/2019/12/logo-StarWars-500x214.png" alt="Star Wars Logo">
+  <p><strong>The Force Awakens</strong></p>
+
+  <div class="bb-8">
+    <div class="bb-8__robot">
+      <div class="bb-8__head">
+        <div class="bb-8__antenna-short"></div>
+        <div class="bb-8__antenna-long"></div>
+        <div class="bb-8__head-line"></div>
+        <div class="bb-8__eye">
+          <div class="bb-8__eye-light"></div>
+        </div>
+        <div class="bb-8__eye-small"></div>
+        <div class="bb-8__head-bottom"></div>
+      </div>
+      <div class="bb-8__body"></div>
+      <div class="bb-8__shadow"></div>
+    </div>
+  </div>
+  <div class="luna"></div>
+</body>
+</html>
